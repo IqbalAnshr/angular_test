@@ -1,6 +1,9 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
+
 import { BestSellingComponent } from './best_selling/best_selling.component';
 import { BillboardComponent } from './billboard/billboard.component';
 import { CustomerReviewComponent } from './customer_review/customer_review.component';
@@ -11,7 +14,7 @@ import { LimitedOfferComponent } from './limited_offer/limited_offer.component';
 import { InstagramComponent } from './instagram/instagram.component';
 import { LatestPostComponent } from './latest_post/latest_post.component';
 
-
+import { BookService } from '../services/book.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,11 @@ import { LatestPostComponent } from './latest_post/latest_post.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
+  ],
+  providers: [
+    BookService
   ],
   exports: [
     BestSellingComponent,

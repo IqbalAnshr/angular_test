@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { CoreModule } from "./core/core.module";
 import { FeaturesModule } from "./features/features.module";
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
